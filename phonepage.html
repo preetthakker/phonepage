@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Website design using HTML and CSS</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="webpage/logo1.png" alt="logo">
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="information">
+        <div class="overlay">
+
+        </div>
+        <img src="webpage/mobile.png" alt="mobile" class="mobile">
+          <div id="circle">
+              <div class="feature one">
+                  <img src="webpage/camera.png" alt="">
+                  <div>
+                    <h1>camera</h1>
+                    <p>12MP, Wide Angle</p>
+                  </div>
+              </div>
+              <div class="feature two">
+                  <img src="webpage/processor.png" alt="">
+                  <div>
+                    <h1>processor</h1>
+                    <p>octa-core snapdragon</p>
+                  </div>
+              </div>
+              <div class="feature three">
+                  <img src="webpage/display.png" alt="">
+                  <div>
+                    <h1>display</h1>
+                    <p>FHD amoled 90hz</p>
+                  </div>
+              </div>
+              <div class="feature four">
+                  <img src="webpage/battery.png" alt="">
+                  <div>
+                    <h1>camera</h1>
+                    <p>6000mAh</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+<div class="controls">
+  <img src="webpage/arrow.png" alt="" id="upbtn">
+  <h3>features</h3>
+  <img src="webpage/arrow.png" alt="" id="downbtn">
+</div>
+
+
+    </div>
+
+    <script>
+      var circle = document.getElementById("circle");
+      var upbtn = document.getElementById("upbtn");
+      var downbtn = document.getElementById("downbtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upbtn.onclick = function()
+      {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      }
+
+      downbtn.onclick = function()
+      {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      }
+    </script>
+  </body>
+</html>
